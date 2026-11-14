@@ -272,6 +272,17 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette)>.eyebrow{text-align:right}
 #p-concept .stmt{margin:26px 0 0}
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .grad ul{padding:0;margin:0}
+
+#p-zoning .rules{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+#p-zoning .rules li{background:#ece6dc;padding:14px 16px;gap:10px;border-radius:14px}
+#p-zoning .rules span{font-size:12pt}
+#p-zoning .rules h4{margin-bottom:2px}
+#p-zoning .why p{background:#e3e8e1}
+@media (max-width:980px){#p-zoning .rules{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){#p-zoning .rules{grid-template-columns:1fr}}
+#p-zoning .rules li{align-items:baseline;align-self:stretch}
+#p-zoning .rules h4,#p-zoning .rules p{margin:0;padding:0}
+#p-zoning .rules span{line-height:1.4}
 </style>
 
 <main class="hero">
@@ -422,7 +433,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
           <div class="sub"><div class="eyebrow">Programme</div>
         <p class="intro" style="margin-top:8px">15 workstations, a boardroom for 16, the CEO cabin, two meeting rooms for 4, and reception with waiting. Added because they serve the idea: a listening lab, phone booths, a pantry, a cafe nook, the garden table and wall booths.</p>
       </div>
-      <aside class="split-note"><div class="eyebrow">Side note · how the floor area splits</div>
+      <aside class="split-note"><div class="eyebrow">How the floor area splits</div>
         <div class="abar"><span style="flex:11;background:#d8bfa3" title="Arrive 11%"></span><span style="flex:17;background:#9fb0ad" title="Meet 17%"></span><span style="flex:15;background:#bccbc4" title="Work 15%"></span><span style="flex:24;background:#a9bf9c" title="Unwind and focus 24%"></span><span style="flex:32;background:#ddd5c8" title="Circulation 32%"></span></div>
         <ul class="alist"><li><i style="background:#d8bfa3"></i><b>Arrive</b><span>Reception, waiting, washroom lobby</span><em>11%</em></li><li><i style="background:#9fb0ad"></i><b>Meet</b><span>Boardroom, CEO cabin, meeting rooms</span><em>17%</em></li><li><i style="background:#bccbc4"></i><b>Work</b><span>15 desks and booths</span><em>15%</em></li><li><i style="background:#a9bf9c"></i><b>Unwind and focus</b><span>Trail, garden, cafe nook, lab, booths, collab areas</span><em>24%</em></li><li><i style="background:#ddd5c8"></i><b>Circulation</b><span>Paths and links between zones</span><em>32%</em></li></ul>
       </aside>
