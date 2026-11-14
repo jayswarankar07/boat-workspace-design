@@ -340,15 +340,33 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 #p-mood .mtxt p{margin:0 0 10px;color:#4b4540}
 #p-mood .mtxt p.mat{color:var(--muted);margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}
 @media (max-width:860px){#p-mood .mrow{grid-template-columns:1fr}}
+/* v26 */
+#p-research .map .r b{font-size:10pt}
+:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette)>.eyebrow{font-size:10pt}
+#p-zoning .legend .li{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+#p-zoning .legend .li i{margin-right:0}
+.why p{margin:0}
+@media (max-width:760px){
+ #p-zoning .alist li{grid-template-columns:14px minmax(0,1fr) 44px;row-gap:2px}
+ #p-zoning .alist{gap:14px}
+ #p-zoning .alist i{grid-column:1;grid-row:1}#p-zoning .alist b{grid-column:2;grid-row:1}#p-zoning .alist em{grid-column:3;grid-row:1}#p-zoning .alist span{grid-column:2/4;grid-row:2}
+ #p-concept .map .r{grid-template-columns:auto auto minmax(0,1fr);column-gap:10px}
+ #p-concept .map .r span{grid-column:1/-1}
+ #p-concept .sec img{min-width:0}
+ #p-zoning .legend{flex-direction:column;align-items:flex-start}
+}
+.blurb{max-width:60ch}
+.side h2{font-weight:500;letter-spacing:-.01em}
+.tile b{font-weight:500;letter-spacing:-.01em}
 </style>
 
 <main class="hero">
   <header class="top">
     <div>
       <div class="kick">An office that behaves like <span class="b">boAt</span></div>
-      <p class="blurb">India HQ on a 16th-floor plate of about 6,500 sq ft. A garden trail at the centre, one curved bench for the team, and every room a short walk from everyone else.</p>
+      <p class="blurb">A fluid, open and connected workspace where collaboration thrives, ideas flow and every individual feels inspired. Brand experience, social and creative zones, focus areas and leadership sit along one journey, from discovery to connection to creation, so experimenting becomes part of the everyday. A dynamic ecosystem for a brand that never stops creating.</p>
     </div>
-    <div class="by"><small>SKV design test</small>Presentation by Shruti Sinha</div>
+    <div class="by">Presentation by Shruti Sinha</div>
   </header>
 
   <section class="stage" id="stage" aria-label="boAt logo over a 3D model of the floor plan">
@@ -454,8 +472,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
         <div class="avoid on"><span>More than one type of workstation</span><span>A biophilic oasis</span><span>A sense of community</span><span>Open work areas</span><span>Collaborative booths</span><span>Playful design</span></div>
       </div>
       <div class="sub"><div class="eyebrow">What we chose not to do</div>
-        <div class="avoid"><span>red and black surfaces</span><span>headphone motifs</span><span>sound-wave ceilings</span><span>neon slogans</span><span>themed props</span></div>
-        <p class="intro" style="margin-top:12px;font-size:14px">The brand shows up once, as the logo at reception. Everything else is about how the space behaves.</p>
+        <div class="avoid"><span>boAt red-and-black livery</span><span>headphone-shaped furniture</span><span>literal sound-wave graphics</span><span>neon slogans</span><span>themed props</span></div>
+        <p class="intro" style="margin-top:12px">The brand shows up as the logo at reception and a few witty accents. Everything else is about how the space behaves.</p>
       </div>
     </article>
 
@@ -467,17 +485,17 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
       <div class="grad">
         <div><h4>Public</h4><ul><li>Reception arc and desk</li><li>Waiting on the timber steps</li><li>Logo wall</li></ul></div>
         <div><h4>Shared</h4><ul><li>Garden trail and pebble bed</li><li>Central green</li><li>Lounge at the glazed end</li><li>Teal collaboration edge</li></ul></div>
-        <div><h4>Team</h4><ul><li>15 desks on one curved bench</li><li>Wall booths</li><li>Phone booths</li></ul></div>
+        <div><h4>Team</h4><ul><li>15 desks on one curved bench</li><li>Column booths</li><li>Phone booths</li></ul></div>
         <div><h4>Private</h4><ul><li>Leadership cabin</li><li>Boardroom for 16</li><li>2 meeting rooms for 4</li></ul></div>
       </div>
       <div class="arrowbar"><span>Loud · together</span><span>Quiet · alone</span></div>
-      <figure class="zfig"><img src="zn-zoning.webp" alt="Detailed zoning diagram on the floor plate: reception, waiting and branding at the main entry, a curving collaborate, connect, relax and unwind band, the workstation area in the centre, private work zones, collab and focus areas towards the glazing, pantry and lockers on the left" loading="lazy"><figcaption><span class="eyebrow">Detailed zoning · public to private</span>Reception, waiting and branding open straight off the main entry, closest to the lift lobby. A curving band to collaborate, connect, relax and unwind separates this public front from the work floor. The workstation area sits at the centre with clear sight lines to every zone. The private work zones, collab area and focus area sit towards the glazing, with screening only where the diagram marks a need for a barrier. Public collab and the pantry and lockers stay near the second exit.<span class="legend"><i class="l1"></i>Circulation and connection <i class="l2"></i>Direct connection <i class="l3"></i>Visual access and points of view <i class="l4"></i>Need for a barrier</span></figcaption></figure>
+      <figure class="zfig"><img src="zn-zoning.webp" alt="Detailed zoning diagram on the floor plate: reception, waiting and branding at the main entry, a curving collaborate, connect, relax and unwind band, the workstation area in the centre, private work zones, collab and focus areas towards the glazing, pantry and lockers on the left" loading="lazy"><figcaption><span class="eyebrow">Detailed zoning · public to private</span>Reception, waiting and branding open straight off the main entry, closest to the lift lobby. A curving band to collaborate, connect, relax and unwind separates this public front from the work floor. The workstation area sits at the centre with clear sight lines to every zone. The private work zones, collab area and focus area sit towards the glazing, with screening only where the diagram marks a need for a barrier. Public collab and the pantry and lockers stay near the second exit.<span class="legend"><span class="li"><i class="l1"></i>Circulation and connection</span><span class="li"><i class="l2"></i>Direct connection</span><span class="li"><i class="l3"></i>Visual access and points of view</span><span class="li"><i class="l4"></i>Need for a barrier</span></span></figcaption></figure>
       <div class="sub"><div class="eyebrow">Four rules</div>
         <ol class="rules">
           <li><span>1</span><div><h4>One trail, many stops</h4><p>Every space touches the pebble path.</p></div></li>
           <li><span>2</span><div><h4>Loud at the door, quiet at the glass</h4><p>Visitors stay in front, focus sits at the far end.</p></div></li>
           <li><span>3</span><div><h4>Curves zone, walls do not</h4><p>Planters, levels and fin screens divide the floor.</p></div></li>
-          <li><span>4</span><div><h4>Listening gets a room</h4><p>The one direct nod to the product.</p></div></li>
+          <li><span>4</span><div><h4>Listening gets a room</h4><p>A direct nod to the product: sound you can test.</p></div></li>
         </ol>
       </div>
       <div class="sub"><div class="eyebrow">Hierarchy</div>
@@ -506,11 +524,11 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
         <p><b>The team sits in the middle</b>One curved bench in the centre, screened from waiting by the reception arc, planting and level changes.</p>
       </div>
           <div class="sub"><div class="eyebrow">Programme</div>
-        <p class="intro" style="margin-top:8px;max-width:none">15 workstations, a boardroom for 16, the CEO cabin, two meeting rooms for 4, and reception with waiting. Added because they serve the idea: a listening lab, phone booths, a pantry, a cafe nook, the garden table and wall booths.</p>
+        <p class="intro" style="margin-top:8px;max-width:none">15 workstations, a boardroom for 16, a leadership cabin, two meeting rooms for 4, and reception with waiting. Added because they serve the idea: a listening lab, phone booths, a pantry with a cafe nook, garden sit-outs and column booths.</p>
       </div>
       <aside class="split-note"><div class="eyebrow">How the floor area splits</div>
-        <div class="abar"><span style="flex:11;background:#d8bfa3" title="Arrive 11%"></span><span style="flex:17;background:#9fb0ad" title="Meet 17%"></span><span style="flex:15;background:#bccbc4" title="Work 15%"></span><span style="flex:24;background:#a9bf9c" title="Unwind and focus 24%"></span><span style="flex:32;background:#ddd5c8" title="Circulation 32%"></span></div>
-        <ul class="alist"><li><i style="background:#d8bfa3"></i><b>Arrive</b><span>Reception, waiting, washroom lobby</span><em>11%</em></li><li><i style="background:#9fb0ad"></i><b>Meet</b><span>Boardroom, CEO cabin, meeting rooms</span><em>17%</em></li><li><i style="background:#bccbc4"></i><b>Work</b><span>15 desks and booths</span><em>15%</em></li><li><i style="background:#a9bf9c"></i><b>Unwind and focus</b><span>Trail, garden, cafe nook, lab, booths, collab areas</span><em>24%</em></li><li><i style="background:#ddd5c8"></i><b>Circulation</b><span>Paths and links between zones</span><em>32%</em></li></ul>
+        <div class="abar"><span style="flex:16;background:#d8bfa3" title="Arrive 16%"></span><span style="flex:21;background:#9fb0ad" title="Meet 21%"></span><span style="flex:18;background:#bccbc4" title="Work 18%"></span><span style="flex:24;background:#a9bf9c" title="Unwind and focus 24%"></span><span style="flex:21;background:#ddd5c8" title="Circulation 21%"></span></div>
+        <ul class="alist"><li><i style="background:#d8bfa3"></i><b>Arrive</b><span>Reception, stepped amphi, executive lounges, lockers</span><em>16%</em></li><li><i style="background:#9fb0ad"></i><b>Meet</b><span>Boardroom, leadership cabin, meeting rooms, forecourt</span><em>21%</em></li><li><i style="background:#bccbc4"></i><b>Work</b><span>15 workstations, informal collab, phone booths</span><em>18%</em></li><li><i style="background:#a9bf9c"></i><b>Unwind and focus</b><span>Garden trail, semi-public collab, alcoves, listening lab, pantry</span><em>24%</em></li><li><i style="background:#ddd5c8"></i><b>Circulation</b><span>Passages, 5 ft to 10.9 ft</span><em>21%</em></li></ul>
       </aside>
     </article>
 
@@ -558,12 +576,12 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 
     <article class="pane" id="p-palette">
       <div class="eyebrow">06 · Material palette</div>
-      <h3>Raw base, rich layers</h3>
+      <h3>Natural base, rich layers</h3>
       <div class="mrow">
         <div class="mimg"><img src="mb-materials.webp" alt="Material board: dark walnut fluted panels, terrazzo, exposed concrete, maroon terracotta, brushed steel and champagne gold, smoked and reeded glass, teal velvet, bouclé, floor carpet, planting and pebbles" loading="lazy"></div>
         <div class="mtxt">
           <span class="eyebrow">The material board</span>
-          <p>A raw, honest base of exposed concrete, terrazzo and soft floor carpet, layered with dark walnut fluting, maroon terracotta and deep teal velvet for warmth and personality.</p>
+          <p>A calm, natural base of exposed concrete, terrazzo and soft floor carpet, layered with dark walnut fluting, maroon terracotta and deep teal velvet for warmth and personality.</p>
           <p>Brushed steel, champagne gold and reeded glass add a crafted edge, while planting and pebbles carry the trail through every space.</p>
         </div>
       </div>
