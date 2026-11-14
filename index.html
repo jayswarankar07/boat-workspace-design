@@ -318,6 +318,17 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 #p-zoning .pvp .b1{background:#eee8df}#p-zoning .pvp .b2{background:#e1e7df}#p-zoning .pvp .b3{background:#d7dfdc}#p-zoning .pvp .b4{background:#cfd6d4}
 @media (max-width:980px){#p-zoning .hier{grid-template-columns:1fr 1fr}#p-zoning .adj{grid-template-columns:1fr 1fr}#p-zoning .pvp{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){#p-zoning .hier,#p-zoning .adj,#p-zoning .pvp{grid-template-columns:1fr}}
+
+#p-mood .mrows{display:grid;gap:clamp(22px,3vw,40px);margin-top:clamp(22px,3vw,36px)}
+#p-mood .mrow{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3.5vw,52px);align-items:center;padding-bottom:clamp(22px,3vw,40px);border-bottom:1px solid var(--line)}
+#p-mood .mrow:last-child{border-bottom:0}
+#p-mood .mimg{aspect-ratio:4/3;display:grid;place-items:center}
+#p-mood .mimg img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(60,48,36,.12))}
+#p-mood .mtxt .eyebrow{display:block;margin-bottom:4px;text-align:left}
+#p-mood .mtxt h4{font-family:var(--display);font-size:12pt;font-weight:500;line-height:1.4;margin:0 0 8px}
+#p-mood .mtxt p{margin:0 0 10px;color:#4b4540}
+#p-mood .mtxt p.mat{color:var(--muted);margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}
+@media (max-width:860px){#p-mood .mrow{grid-template-columns:1fr}}
 </style>
 
 <main class="hero">
@@ -523,14 +534,14 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
     <article class="pane" id="p-mood">
       <div class="eyebrow">05 · Mood board</div>
       <h3>A garden you work in</h3>
-      <p class="intro">Soft daylight, warm timber, stone underfoot on the trail and soft floors where people sit. Curves wherever people slow down.</p>
-      <div class="mood">
-        <figure><img src="ref-island.jpg" alt="Timber ribbon pavilion around a tree with hanging seats" loading="lazy"><figcaption><b>The central green</b>A planted heart with timber that wraps around it: the hub people walk through and stop in.</figcaption></figure>
-        <figure><img src="ref-table.jpg" alt="Curved stone-look table growing out of a round planter with a tree" loading="lazy"><figcaption><b>Tables that grow from planters</b>One organic shared surface, a tree at its centre, warm ring lights above.</figcaption></figure>
-        <div class="note"><p>Warm, calm and tactile. Timber, stone and planting carry the space, with one quiet accent colour.</p></div>
-        <figure><img src="ref-trail.jpg" alt="Indoor forest floor with planted islands and log seats" loading="lazy"><figcaption><b>The trail</b>Planted islands, a forest floor and low timber platforms you can sit and work on.</figcaption></figure>
-        <figure><img src="ref-scallop.jpg" alt="Timber scallop arches forming planted alcoves along glazing" loading="lazy"><figcaption><b>Alcoves in rhythm</b>Repeated timber arches and curved benches around raised planters for waiting and short talks.</figcaption></figure>
-        <figure><img src="ref-court.jpg" alt="Garden court behind curved glass with contoured stepped floor" loading="lazy"><figcaption><b>Open but defined</b>Curved, see-through edges and floors that step like landscape, keeping everything open.</figcaption></figure>
+      <p class="intro" style="max-width:none">Three key moments set the visual language: warm timber that flows overhead, planting at the heart of every gathering, and boAt's red used only as a quiet accent among natural materials.</p>
+      <div class="mrows">
+        <div class="mrow"><div class="mimg"><img src="mb-reception.webp" alt="Reception: a curving timber ceiling band over a terracotta wrapped desk with the boAt logo, lime plaster walls, globe pendant, planting and a sculpted bust" loading="lazy"></div>
+          <div class="mtxt"><span class="eyebrow">01 · Arrival</span><h4>A welcome that flows</h4><p>A timber ceiling band sweeps over the desk and folds down into a column. It is the first fluid line of the trail and draws the eye inward. The desk wraps in muted terracotta, boAt's red softened into a material, set against lime plaster, a globe pendant and lush planting.</p><p>The sculpted bust and the bold striped artwork bring the brand's self-expression in as art rather than branding, so the arrival feels confident, warm and personal.</p><p class="mat">Timber veneer · terracotta lacquer · lime plaster · solid surface · planting</p></div></div>
+        <div class="mrow"><div class="mimg"><img src="mb-garden.webp" alt="Garden table: concentric timber ceiling rings with light lines above a stone table growing from an olive tree planter, cushioned seats, stools, jute rug and a graffiti panel" loading="lazy"></div>
+          <div class="mtxt"><span class="eyebrow">02 · The garden table</span><h4>Gathering around the green</h4><p>Concentric timber rings with hidden light lines ripple out from the tree like sound from a source, then carry on along the trail. A stone table grows out of an olive-branch planter, with low cushions, turned stools and a jute rug, so people meet around nature instead of a boardroom table.</p><p>One hand-drawn graffiti wall adds the energy of youth culture as a single expressive surface, never a theme.</p><p class="mat">Oak rings with linear light · natural stone · jute · terracotta · live planting</p></div></div>
+        <div class="mrow"><div class="mimg"><img src="mb-lounge.webp" alt="Lounge: a curved fluted timber screen, sage boucle chairs on a dark round rug, a pop painting of a goat in headphones, a black sculptural totem and a cascade of red wooden beads" loading="lazy"></div>
+          <div class="mtxt"><span class="eyebrow">03 · The lounge</span><h4>Personality in small doses</h4><p>A curved, fluted timber screen wraps the lounge and gives privacy without a wall. Sage bouclé chairs, a dark loop rug and a black sculptural totem keep the corner calm and tactile.</p><p>The pop painting of a goat in headphones is the one witty nod to the brand's attitude, and a cascade of red wooden beads carries boAt's colour as an accent, not a surface.</p><p class="mat">Walnut fins · bouclé · stone plaster · loop-pile rug · lacquered wood beads</p></div></div>
       </div>
     </article>
 
