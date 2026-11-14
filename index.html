@@ -225,6 +225,20 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
+
+#p-zoning .sub{margin-top:clamp(30px,3.4vw,46px)}
+#p-zoning .zfig{margin:clamp(26px,3vw,40px) 0 0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+#p-zoning .zfig img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain}
+#p-zoning .zfig figcaption{padding:16px 22px 20px;color:#4b4540;border-top:1px solid var(--line);background:var(--card)}
+#p-zoning .zfig figcaption .eyebrow{display:block;margin-bottom:6px}
+#p-zoning .legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;color:var(--muted);align-items:center}
+#p-zoning .legend i{display:inline-block;width:26px;height:0;border-top:2px dashed #a8322b;margin-right:-10px;vertical-align:middle}
+#p-zoning .legend i.l2{border-top:2px solid #e39a4c}#p-zoning .legend i.l3{border-top:1.5px dashed #3c5fc4}#p-zoning .legend i.l4{border-top:2px dotted #3c5fc4}
+#p-zoning .rules{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+#p-zoning .rules li{display:flex;gap:14px;background:var(--card);border-radius:16px;padding:22px}
+#p-zoning .rules span{font-family:var(--display);font-size:14pt;font-weight:400;color:#b8875e;line-height:1.2}
+#p-zoning .rules h4{font-family:var(--display);font-size:12pt;font-weight:500;line-height:1.4;margin-bottom:4px}
+#p-zoning .why{margin-top:14px}
 /* v12: one type scale for every tab: 14pt heading / 12pt subheading / 10pt text, no bold, one left edge */
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) h3:not(.rh){font-family:var(--display);font-size:14pt;font-weight:500;line-height:1.3;letter-spacing:0;margin:6px 0 10px;max-width:none}
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .eyebrow,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .card h4,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .grad h4,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .map .r b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .dna b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .why p b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .mood figcaption b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .sw b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .tag,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .prog b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .quote{font-family:var(--display);font-size:12pt;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none}
@@ -370,6 +384,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
       <div class="eyebrow">03 · Zoning</div>
       <h3>Public at the door, private at the glass</h3>
       <p class="intro">Visitors enter through the main double door into the reception arc. The floor gets quieter and more private the further you walk from it, and the garden trail is the shared ground in between.</p>
+      <figure class="zfig"><img src="zn-bubble.webp" alt="Bubble diagram: reception with lounge and garden at the main entry, leading to a working space and a larger co-working space, each ringed by collab, focus and unwind pockets, all tied by one dashed loop" loading="lazy"><figcaption><span class="eyebrow">Initial idea · bubble diagram</span>Reception, lounge and garden sit together at the main entry. Two work clusters lie beyond, a working space and a larger co-working space. Each is ringed by small collab, focus and unwind pockets, and one dashed loop ties them all together. That loop becomes the trail.</figcaption></figure>
       <div class="grad">
         <div><h4>Public</h4><ul><li>Reception arc and desk</li><li>Waiting on the timber steps</li><li>Logo wall</li></ul></div>
         <div><h4>Shared</h4><ul><li>Garden trail and pebble bed</li><li>Central green</li><li>Lounge at the glazed end</li><li>Teal collaboration edge</li></ul></div>
@@ -377,11 +392,24 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
         <div><h4>Private</h4><ul><li>Leadership cabin</li><li>Boardroom for 16</li><li>2 meeting rooms for 4</li></ul></div>
       </div>
       <div class="arrowbar"><span>Loud · together</span><span>Quiet · alone</span></div>
+      <figure class="zfig"><img src="zn-zoning.webp" alt="Detailed zoning diagram on the floor plate: reception, waiting and branding at the main entry, a curving collaborate, connect, relax and unwind band, the workstation area in the centre, private work zones, collab and focus areas towards the glazing, pantry and lockers on the left" loading="lazy"><figcaption><span class="eyebrow">Detailed zoning · public to private</span>Reception, waiting and branding open straight off the main entry, closest to the lift lobby. A curving band to collaborate, connect, relax and unwind separates this public front from the work floor. The workstation area sits at the centre with clear sight lines to every zone. The private work zones, collab area and focus area sit towards the glazing, with screening only where the diagram marks a need for a barrier. Public collab and the pantry and lockers stay near the second exit.<span class="legend"><i class="l1"></i>Circulation and connection <i class="l2"></i>Direct connection <i class="l3"></i>Visual access and points of view <i class="l4"></i>Need for a barrier</span></figcaption></figure>
+      <div class="sub"><div class="eyebrow">Four rules</div>
+        <ol class="rules">
+          <li><span>1</span><div><h4>One trail, many stops</h4><p>Every space touches the pebble path.</p></div></li>
+          <li><span>2</span><div><h4>Loud at the door, quiet at the glass</h4><p>Visitors stay in front, focus sits at the far end.</p></div></li>
+          <li><span>3</span><div><h4>Curves zone, walls do not</h4><p>Planters, levels and fin screens divide the floor.</p></div></li>
+          <li><span>4</span><div><h4>Listening gets a room</h4><p>The one direct nod to the product.</p></div></li>
+        </ol>
+      </div>
+      <div class="sub"><div class="eyebrow">Why this zoning works</div></div>
+
       <div class="why">
         <p><b>Visitors never cross the desks</b>Reception, waiting and the building washrooms all sit on the corridor side, reached straight from the entry.</p>
         <p><b>Rooms take the glazed edge</b>The boardroom, cabin and meeting rooms line the façade. Glass fronts pass daylight into the open centre.</p>
         <p><b>The team sits in the middle</b>One curved bench in the centre, screened from waiting by the reception arc, planting and level changes.</p>
-        <p><b>Curves zone, walls do not</b>Planters, steps and carpet changes divide the open floor. Only rooms that need privacy get full walls.</p>
+      </div>
+          <div class="sub"><div class="eyebrow">Programme</div>
+        <p class="intro" style="margin-top:8px">15 workstations, a boardroom for 16, the CEO cabin, two meeting rooms for 4, and reception with waiting. Added because they serve the idea: a listening lab, phone booths, a pantry, a cafe nook, the garden table and wall booths.</p>
       </div>
     </article>
 
