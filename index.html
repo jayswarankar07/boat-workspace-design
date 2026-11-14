@@ -361,6 +361,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 :root{--bg:#f2f0ef;--sheet:#f2f0ef}
 html,body{background:#f2f0ef}
 .sheet{background:#f2f0ef}
+/* v28: images without backgrounds, phone name top right */
+#p-concept .sk,#p-concept .pair .sk,#p-concept .sec .scroll,#p-zoning .zfig,#p-layout .viewer{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#p-concept .sk img,#p-concept .pair .sk img,#p-zoning .zfig img{background:transparent!important}
+#p-concept .sk figcaption,#p-concept .sec figcaption{padding-left:0!important;padding-right:0!important}
+#p-zoning .zfig figcaption{background:transparent!important;border-top:0!important;padding:10px 0 0!important}
+@media (max-width:760px){
+ .top{flex-direction:column}
+ .top .by{order:-1;align-self:flex-end;text-align:right;margin-bottom:10px}
+}
 </style>
 
 <main class="hero">
@@ -440,7 +449,7 @@ html,body{background:#f2f0ef}
         <div class="card"><h4>The task</h4><p>Understand the brand beyond its logo and products. Understand its philosophy and personality. Then design a space that thinks, behaves and feels like boAt.</p></div>
         <div class="card"><h4>The space it needs</h4><p>A workplace catering to diverse work styles. Each part has its own identity but belongs to a whole system. Bold, expressive, positive and energetic. Exploration, connection and rhythm, with functionality and fun. Built on the relationship between sound, energy, people and movement.</p></div>
       </div>
-      <figure class="sk wide"><img src="sk-sound.webp" alt="Sketch: a sculpted timber canopy curving down to the floor over an open glazed hall" loading="lazy"><figcaption>Sound becomes space.</figcaption></figure>
+      <figure class="sk wide"><img src="t-sk-sound.webp" alt="Sketch: a sculpted timber canopy curving down to the floor over an open glazed hall" loading="lazy"><figcaption>Sound becomes space.</figcaption></figure>
       <div class="sub"><div class="eyebrow">Brand DNA → design principles</div></div>
       <div class="dna">
         <div class="d"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><b>Music</b><small>Sound &amp; rhythm</small></div>
@@ -454,7 +463,7 @@ html,body{background:#f2f0ef}
           <p class="big">One winding garden trail ties every space together. A working day becomes a series of short walks between loud and quiet, between the group and the individual.</p>
           <ul class="ideas"><li><b>Rhythm</b> in form</li><li><b>Movement</b> in flow</li><li><b>Connection</b> in space</li></ul>
         </div>
-        <figure class="sk"><img src="sk-movement.webp" alt="Sketch: a curved timber and red-lined passage along the glazing, people walking through" loading="lazy"><figcaption>Movement connects people.</figcaption></figure>
+        <figure class="sk"><img src="t-sk-movement.webp" alt="Sketch: a curved timber and red-lined passage along the glazing, people walking through" loading="lazy"><figcaption>Movement connects people.</figcaption></figure>
       </div>
       <div class="sub"><div class="eyebrow">From brand character to space</div></div>
       <div class="map" aria-label="Brand character to space">
@@ -465,11 +474,11 @@ html,body{background:#f2f0ef}
         <div class="r"><b>Listening</b><i>→</i><b>Focus</b><span>Private conversation areas: phone booths, the cabin and meeting rooms on the glazed edge.</span></div>
       </div>
       <div class="grid2 pair">
-        <figure class="sk"><img src="sk-booth.webp" alt="Sketch: an arched timber booth lined in red with a table for four, beside a tree" loading="lazy"><figcaption>Listening becomes focus.</figcaption></figure>
-        <figure class="sk"><img src="sk-community.webp" alt="Sketch: red stepped timber seating with people sitting on different levels" loading="lazy"><figcaption>Community builds culture.</figcaption></figure>
+        <figure class="sk"><img src="t-sk-booth.webp" alt="Sketch: an arched timber booth lined in red with a table for four, beside a tree" loading="lazy"><figcaption>Listening becomes focus.</figcaption></figure>
+        <figure class="sk"><img src="t-sk-community.webp" alt="Sketch: red stepped timber seating with people sitting on different levels" loading="lazy"><figcaption>Community builds culture.</figcaption></figure>
       </div>
       <div class="sub"><div class="eyebrow">Section · how the trail moves from entry to meeting room</div></div>
-      <figure class="sec"><div class="scroll"><img src="sk-section.webp" alt="Section from the entry passage through reception, the logo wall planter band, the trail, the central green patch and the main passage to meeting room 1" loading="lazy"></div>
+      <figure class="sec"><div class="scroll"><img src="t-sk-section.webp" alt="Section from the entry passage through reception, the logo wall planter band, the trail, the central green patch and the main passage to meeting room 1" loading="lazy"></div>
         <figcaption>Entry passage → reception → logo wall and planter band → the trail → central green patch → main passage → meeting room. Slatted timber ceilings mark the arrival and the rooms; ring lights and the tree mark the open trail in between.</figcaption></figure>
       <div class="sub"><div class="eyebrow">What that becomes on the floor</div>
         <div class="avoid on"><span>More than one type of workstation</span><span>A biophilic oasis</span><span>A sense of community</span><span>Open work areas</span><span>Collaborative booths</span><span>Playful design</span></div>
@@ -484,7 +493,7 @@ html,body{background:#f2f0ef}
       <div class="eyebrow">03 · Zoning</div>
       <h3>From buzz to focus</h3>
       <p class="intro">Visitors enter through the main double door into the reception arc. The floor gets quieter and more private the further you walk from it, and the garden trail is the shared ground in between.</p>
-      <figure class="zfig"><img src="zn-bubble.webp" alt="Bubble diagram: reception with lounge and garden at the main entry, leading to a working space and a larger co-working space, each ringed by collab, focus and unwind pockets, all tied by one dashed loop" loading="lazy"><figcaption><span class="eyebrow">Initial idea · bubble diagram</span>Reception, lounge and garden sit together at the main entry. Two work clusters lie beyond, a working space and a larger co-working space. Each is ringed by small collab, focus and unwind pockets, and one dashed loop ties them all together. That loop becomes the trail.</figcaption></figure>
+      <figure class="zfig"><img src="t-zn-bubble.webp" alt="Bubble diagram: reception with lounge and garden at the main entry, leading to a working space and a larger co-working space, each ringed by collab, focus and unwind pockets, all tied by one dashed loop" loading="lazy"><figcaption><span class="eyebrow">Initial idea · bubble diagram</span>Reception, lounge and garden sit together at the main entry. Two work clusters lie beyond, a working space and a larger co-working space. Each is ringed by small collab, focus and unwind pockets, and one dashed loop ties them all together. That loop becomes the trail.</figcaption></figure>
       <div class="grad">
         <div><h4>Public</h4><ul><li>Reception arc and desk</li><li>Waiting on the timber steps</li><li>Logo wall</li></ul></div>
         <div><h4>Shared</h4><ul><li>Garden trail and pebble bed</li><li>Central green</li><li>Lounge at the glazed end</li><li>Teal collaboration edge</li></ul></div>
@@ -492,7 +501,7 @@ html,body{background:#f2f0ef}
         <div><h4>Private</h4><ul><li>Leadership cabin</li><li>Boardroom for 16</li><li>2 meeting rooms for 4</li></ul></div>
       </div>
       <div class="arrowbar"><span>Loud · together</span><span>Quiet · alone</span></div>
-      <figure class="zfig"><img src="zn-zoning.webp" alt="Detailed zoning diagram on the floor plate: reception, waiting and branding at the main entry, a curving collaborate, connect, relax and unwind band, the workstation area in the centre, private work zones, collab and focus areas towards the glazing, pantry and lockers on the left" loading="lazy"><figcaption><span class="eyebrow">Detailed zoning · public to private</span>Reception, waiting and branding open straight off the main entry, closest to the lift lobby. A curving band to collaborate, connect, relax and unwind separates this public front from the work floor. The workstation area sits at the centre with clear sight lines to every zone. The private work zones, collab area and focus area sit towards the glazing, with screening only where the diagram marks a need for a barrier. Public collab and the pantry and lockers stay near the second exit.<span class="legend"><span class="li"><i class="l1"></i>Circulation and connection</span><span class="li"><i class="l2"></i>Direct connection</span><span class="li"><i class="l3"></i>Visual access and points of view</span><span class="li"><i class="l4"></i>Need for a barrier</span></span></figcaption></figure>
+      <figure class="zfig"><img src="t-zn-zoning.webp" alt="Detailed zoning diagram on the floor plate: reception, waiting and branding at the main entry, a curving collaborate, connect, relax and unwind band, the workstation area in the centre, private work zones, collab and focus areas towards the glazing, pantry and lockers on the left" loading="lazy"><figcaption><span class="eyebrow">Detailed zoning · public to private</span>Reception, waiting and branding open straight off the main entry, closest to the lift lobby. A curving band to collaborate, connect, relax and unwind separates this public front from the work floor. The workstation area sits at the centre with clear sight lines to every zone. The private work zones, collab area and focus area sit towards the glazing, with screening only where the diagram marks a need for a barrier. Public collab and the pantry and lockers stay near the second exit.<span class="legend"><span class="li"><i class="l1"></i>Circulation and connection</span><span class="li"><i class="l2"></i>Direct connection</span><span class="li"><i class="l3"></i>Visual access and points of view</span><span class="li"><i class="l4"></i>Need for a barrier</span></span></figcaption></figure>
       <div class="sub"><div class="eyebrow">Four rules</div>
         <ol class="rules">
           <li><span>1</span><div><h4>One trail, many stops</h4><p>Every space touches the pebble path.</p></div></li>
@@ -539,7 +548,7 @@ html,body{background:#f2f0ef}
       <div class="eyebrow">04 · Layout</div>
       <h3>A floor you discover, one turn at a time</h3>
       <p class="intro" style="max-width:none">One continuous trail organises the whole floor. It starts at the main entrance, wraps around the reception and branding wall, and carries people past every kind of work setting before it reaches the quiet rooms on the glazed edge. Nothing is a corridor; every route is also a place to pause, meet or work.</p>
-      <div class="viewer" id="viewer"><img id="vimg" src="plan-v2.jpg" alt="Rendered floor plan of boAt India HQ with reception, stepped amphi, garden trail, formal working zone, boardroom, leadership cabin, meeting rooms, phone booths, focus alcoves, listening lab and pantry"></div>
+      <div class="viewer" id="viewer"><img id="vimg" src="plan-v2.webp" alt="Rendered floor plan of boAt India HQ with reception, stepped amphi, garden trail, formal working zone, boardroom, leadership cabin, meeting rooms, phone booths, focus alcoves, listening lab and pantry"></div>
       <p class="zhint">Click the plan to zoom in on any part of it.</p>
       <div class="sub"><div class="eyebrow">Why this plan works for boAt India</div></div>
       <div class="lwhy">
