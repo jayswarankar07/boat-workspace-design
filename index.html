@@ -250,6 +250,17 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 #p-zoning .alist em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums}
 #p-zoning .alist li>*{font-size:10pt}
 @media (max-width:600px){#p-zoning .alist li{grid-template-columns:14px minmax(0,1fr) 44px}#p-zoning .alist span{grid-column:2/4}}
+/* v25 palette */
+#p-palette .mrow{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3.5vw,52px);align-items:center;margin-top:18px}
+#p-palette .mimg img{width:100%;height:auto;display:block;filter:drop-shadow(0 14px 22px rgba(60,48,36,.12))}
+#p-palette .mtxt p{color:#4b4540;margin:8px 0 0}
+#p-palette .ratio,#p-palette .arrowbar{max-width:none}
+#p-palette .ratio{margin-top:44px}
+#p-palette .pleg{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 28px}
+#p-palette .pleg li{display:flex;align-items:center;gap:10px;color:#4b4540;border-top:1px solid #e6e0d8;padding-top:10px}
+#p-palette .pleg i{width:14px;height:14px;border-radius:50%;flex:none}
+#p-palette .pleg em{font-style:normal;margin-left:auto;color:var(--muted)}
+@media (max-width:760px){#p-palette .mrow{grid-template-columns:1fr}#p-palette .pleg{grid-template-columns:1fr 1fr}#p-palette .arrowbar{gap:16px}}
 /* v12: one type scale for every tab: 14pt heading / 12pt subheading / 10pt text, no bold, one left edge */
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) h3:not(.rh){font-family:var(--display);font-size:14pt;font-weight:500;line-height:1.3;letter-spacing:0;margin:6px 0 10px;max-width:none}
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .eyebrow,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .card h4,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .grad h4,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .map .r b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .dna b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .why p b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .mood figcaption b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .sw b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .tag,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .prog b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .quote{font-family:var(--display);font-size:12pt;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none}
@@ -547,21 +558,18 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 
     <article class="pane" id="p-palette">
       <div class="eyebrow">06 · Material palette</div>
-      <h3>Calm, warm and easy to build</h3>
-      <p class="intro">Standard fit-out materials in a restrained range: carpet tile, timber veneer, a pebble bed and real planting. Colour comes from the materials, not from paint.</p>
-      <div class="pal">
-        <div class="sw"><div class="chip" style="background-image:url(sw-grey.jpg)"></div><div class="t"><b>Light grey carpet</b><span>Main work floor and circulation</span></div></div>
-        <div class="sw"><div class="chip" style="background-image:url(sw-beige.jpg)"></div><div class="t"><b>Beige carpet</b><span>Boardroom, cabin, meeting rooms, booths</span></div></div>
-        <div class="sw"><div class="chip" style="background-image:url(sw-teal.jpg)"></div><div class="t"><b>Dusty teal carpet</b><span>Collaboration edge below the rooms, the one accent</span></div></div>
-        <div class="sw"><div class="chip" style="background-image:url(sw-steps.jpg)"></div><div class="t"><b>Timber steps</b><span>Reception arc and the steps by the duct</span></div></div>
-        <div class="sw"><div class="chip" style="background-image:url(sw-oak.jpg)"></div><div class="t"><b>Light oak</b><span>Desk tops, room tables, column rings</span></div></div>
-        <div class="sw"><div class="chip" style="background-image:url(sw-pebble.jpg)"></div><div class="t"><b>Warm chalk pebble</b><span>The trail, with sculptural stones</span></div></div>
-        <div class="sw"><div class="chip" style="background-image:url(sw-grass.jpg)"></div><div class="t"><b>Grass and planting</b><span>Central green and planter beds</span></div></div>
-        <div class="sw"><div class="chip" style="background:#f4f1ec;box-shadow:inset 0 0 0 1px #e2dcd3"></div><div class="t"><b>Off-white suede</b><span>Sofas, benches, pouffes, all loose furniture</span></div></div>
-        <div class="sw"><div class="chip" style="background:linear-gradient(90deg,#26241f 0 50%,#706a64 50%)"></div><div class="t"><b>Black columns, warm grey walls</b><span>Structure reads clearly and quietly</span></div></div>
+      <h3>Raw base, rich layers</h3>
+      <div class="mrow">
+        <div class="mimg"><img src="mb-materials.webp" alt="Material board: dark walnut fluted panels, terrazzo, exposed concrete, maroon terracotta, brushed steel and champagne gold, smoked and reeded glass, teal velvet, bouclé, floor carpet, planting and pebbles" loading="lazy"></div>
+        <div class="mtxt">
+          <span class="eyebrow">The material board</span>
+          <p>A raw, honest base of exposed concrete, terrazzo and soft floor carpet, layered with dark walnut fluting, maroon terracotta and deep teal velvet for warmth and personality.</p>
+          <p>Brushed steel, champagne gold and reeded glass add a crafted edge, while planting and pebbles carry the trail through every space.</p>
+        </div>
       </div>
-      <div class="ratio" aria-label="Rough proportion of the palette"><span style="flex:55;background:#d4d0cc"></span><span style="flex:20;background:#ebe8e5"></span><span style="flex:10;background:#c3a17d"></span><span style="flex:8;background:#a6b98d"></span><span style="flex:5;background:#b8cbc6"></span><span style="flex:2;background:#26241f"></span></div>
-      <div class="arrowbar" style="max-width:720px"><span>Mostly soft greys and beiges</span><span>Timber, green and teal as accents</span></div>
+      <div class="ratio" aria-label="Rough proportion of the palette"><span style="flex:30;background:#d6d2cc"></span><span style="flex:25;background:#c8b8a4"></span><span style="flex:15;background:#4f3226"></span><span style="flex:12;background:#7d3833"></span><span style="flex:8;background:#1f4a4c"></span><span style="flex:5;background:#8e8984"></span><span style="flex:3;background:#6f8a5a"></span><span style="flex:2;background:#b39b6e"></span></div>
+      <div class="arrowbar"><span>Mostly concrete, terrazzo and soft carpet</span><span>Walnut, terracotta and teal as accents</span></div>
+      <ul class="pleg"><li><i style="background:#d6d2cc"></i><span>Exposed concrete and terrazzo</span><em>30%</em></li><li><i style="background:#c8b8a4"></i><span>Floor carpet</span><em>25%</em></li><li><i style="background:#4f3226"></i><span>Dark walnut fluted panels</span><em>15%</em></li><li><i style="background:#7d3833"></i><span>Maroon terracotta and brick</span><em>12%</em></li><li><i style="background:#1f4a4c"></i><span>Teal velvet and bouclé upholstery</span><em>8%</em></li><li><i style="background:#8e8984"></i><span>Smoked and reeded glass</span><em>5%</em></li><li><i style="background:#6f8a5a"></i><span>Planting and pebbles</span><em>3%</em></li><li><i style="background:#b39b6e"></i><span>Steel, champagne gold and black trims</span><em>2%</em></li></ul>
     </article>
   </div>
   <div class="nav"><button id="prev">← Previous</button><button id="next">Next →</button></div>
