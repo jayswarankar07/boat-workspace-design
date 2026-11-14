@@ -65,6 +65,41 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 #p-research .split .mid{color:var(--red)}
 #p-research .card.aud{margin-top:clamp(14px,1.6vw,22px)}#p-research .card.aud p{max-width:none}
 #p-research .quote{background:var(--tc-ll);border-left:6px solid var(--red);padding:22px 26px;border-radius:0 18px 18px 0;max-width:40ch}
+:root{--mu:#d9b860;--mu-l:#f1e6c6;--mu-ll:#f8f1de;--mu-d:#8a6b1f;--mu-line:#e2d3a6}
+#p-concept h3.ct{margin-bottom:4px}
+#p-concept .tag{font-family:var(--display);font-weight:500;font-size:clamp(17px,1.6vw,22px);color:var(--mu-d);letter-spacing:-.01em}
+#p-concept .stmt{margin-top:26px;background:var(--mu-ll);border-left:6px solid var(--mu);border-radius:0 18px 18px 0;padding:22px 26px}
+#p-concept .stmt p{font-family:var(--display);font-weight:500;font-size:clamp(18px,1.7vw,23px);line-height:1.4;margin-top:8px;max-width:52ch;color:var(--ink)}
+#p-concept .stmt strong{font-weight:700;color:var(--mu-d)}
+#p-concept .card{background:var(--mu-l)}
+#p-concept .card h4{color:var(--mu-d)}
+#p-concept .sub{margin-top:clamp(30px,3.4vw,46px)}
+#p-concept .sk{margin:0;background:#fbf9f3;border-radius:18px;overflow:hidden;border:1px solid var(--mu-line)}
+#p-concept .sk img{display:block;width:100%;height:auto}
+#p-concept .sk figcaption{font-family:var(--display);font-style:italic;font-weight:500;font-size:16px;color:var(--mu-d);padding:10px 18px 14px}
+#p-concept .sk.wide{margin-top:clamp(26px,3vw,40px)}
+#p-concept .dna{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:16px}
+#p-concept .dna .d{background:var(--mu-l);border-radius:18px;padding:22px 14px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+#p-concept .dna .ic{width:58px;height:58px;border-radius:50%;background:var(--ink);display:grid;place-items:center;margin-bottom:6px}
+#p-concept .dna svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#p-concept .dna b{font-family:var(--display);font-weight:700;font-size:16px}
+#p-concept .dna small{font-size:14px;color:var(--mu-d)}
+#p-concept .dna small::before{content:"→ "}
+#p-concept .trail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(20px,3vw,40px);align-items:center;margin-top:clamp(30px,3.4vw,46px)}
+#p-concept .trail .big{font-family:var(--display);font-weight:600;font-size:clamp(20px,2vw,27px);line-height:1.3;letter-spacing:-.01em;margin-top:10px;text-wrap:pretty}
+#p-concept .ideas{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding:0}
+#p-concept .ideas li{padding:8px 16px;border-radius:999px;background:var(--mu-l);font-size:14px}
+#p-concept .ideas b{color:var(--mu-d)}
+#p-concept .map{border-top-color:var(--mu-line);margin-top:12px}
+#p-concept .map .r{border-bottom-color:var(--mu-line)}
+#p-concept .map .r b{color:var(--mu-d)}
+#p-concept .pair{margin-top:clamp(26px,3vw,40px);align-items:start}
+#p-concept .sec{margin:14px 0 0}
+#p-concept .sec .scroll{background:#fbf9f3;border:1px solid var(--mu-line);border-radius:18px;overflow-x:auto}
+#p-concept .sec img{display:block;width:100%;min-width:760px;height:auto}
+#p-concept .sec figcaption{font-size:14px;color:var(--muted);margin-top:10px;max-width:80ch}
+#p-concept .avoid.on span{text-decoration:none;color:var(--ink);background:var(--mu-ll);border-color:var(--mu-line)}
+@media (max-width:980px){#p-concept .dna{grid-template-columns:repeat(2,minmax(0,1fr))}#p-concept .trail{grid-template-columns:1fr}}
 
 /* load sequence */
 @media (prefers-reduced-motion:no-preference){
@@ -243,12 +278,30 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 
     <article class="pane" id="p-concept">
       <div class="eyebrow">02 · Concept</div>
-      <h3>The Trail: a workplace that thinks, behaves and feels like boAt</h3>
-      <div class="grid2" style="margin-top:18px">
+      <h3 class="ct">The Trail</h3>
+      <p class="tag">A workspace that thinks, behaves and feels like boAt.</p>
+      <blockquote class="stmt"><span class="eyebrow">Concept statement</span><p>Sound is never static. It travels, connects, changes moods and brings people together. The workspace translates this energy into <strong>fluid spaces</strong> that inspire focus, spark <strong>collaboration</strong> and celebrate <strong>individuality</strong>.</p></blockquote>
+      <div class="grid2">
         <div class="card"><h4>The task</h4><p>Understand the brand beyond its logo and products. Understand its philosophy and personality. Then design a space that thinks, behaves and feels like boAt.</p></div>
         <div class="card"><h4>The space it needs</h4><p>A workplace catering to diverse work styles. Each part has its own identity but belongs to a whole system. Bold, expressive, positive and energetic. Exploration, connection and rhythm, with functionality and fun. Built on the relationship between sound, energy, people and movement.</p></div>
       </div>
-      <p class="intro" style="margin-top:26px">The idea is one winding garden trail that ties every space together. A working day becomes a series of short walks between loud and quiet, between the group and the individual.</p>
+      <figure class="sk wide"><img src="sk-sound.webp" alt="Sketch: a sculpted timber canopy curving down to the floor over an open glazed hall" loading="lazy"><figcaption>Sound becomes space.</figcaption></figure>
+      <div class="sub"><div class="eyebrow">Brand DNA → design principles</div></div>
+      <div class="dna">
+        <div class="d"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><b>Music</b><small>Sound &amp; rhythm</small></div>
+        <div class="d"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="9" r="2.2"/><circle cx="19" cy="9" r="2.2"/><path d="M6.5 20v-2a5.5 5.5 0 0 1 11 0v2M1.5 19v-1a3.5 3.5 0 0 1 4-3.4M22.5 19v-1a3.5 3.5 0 0 0-4-3.4"/></svg></span><b>Community</b><small>Connection &amp; belonging</small></div>
+        <div class="d"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><b>Energy</b><small>Movement &amp; dynamism</small></div>
+        <div class="d"><span class="ic"><svg viewBox="0 0 24 24"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></svg></span><b>Self-expression</b><small>Freedom &amp; flexibility</small></div>
+        <div class="d"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21.5h4M12 2.5a6.5 6.5 0 0 0-4 11.6c.7.6 1 1.4 1 2.2V17h6v-.7c0-.8.4-1.6 1-2.2a6.5 6.5 0 0 0-4-11.6z"/></svg></span><b>Innovation</b><small>Experiment &amp; create</small></div>
+      </div>
+      <div class="trail">
+        <div><div class="eyebrow">The idea</div>
+          <p class="big">One winding garden trail ties every space together. A working day becomes a series of short walks between loud and quiet, between the group and the individual.</p>
+          <ul class="ideas"><li><b>Rhythm</b> in form</li><li><b>Movement</b> in flow</li><li><b>Connection</b> in space</li></ul>
+        </div>
+        <figure class="sk"><img src="sk-movement.webp" alt="Sketch: a curved timber and red-lined passage along the glazing, people walking through" loading="lazy"><figcaption>Movement connects people.</figcaption></figure>
+      </div>
+      <div class="sub"><div class="eyebrow">From brand character to space</div></div>
       <div class="map" aria-label="Brand character to space">
         <div class="r"><b>Sound</b><i>→</i><b>Form</b><span>Sensory experience, acoustics, flow and rhythm: fluid curves on every edge people pass.</span></div>
         <div class="r"><b>Movement</b><i>→</i><b>Circulation</b><span>Fluid, formed and flexible: a winding pebble trail instead of corridors.</span></div>
@@ -256,10 +309,17 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
         <div class="r"><b>Product</b><i>→</i><b>Experience</b><span>Innovation and an extension of self: a floor people move through and use, not just look at.</span></div>
         <div class="r"><b>Listening</b><i>→</i><b>Focus</b><span>Private conversation areas: phone booths, the cabin and meeting rooms on the glazed edge.</span></div>
       </div>
-      <div style="margin-top:30px"><div class="eyebrow">What that becomes on the floor</div>
-        <div class="avoid" style="margin-top:12px"><span style="text-decoration:none;color:var(--ink)">More than one type of workstation</span><span style="text-decoration:none;color:var(--ink)">A biophilic oasis</span><span style="text-decoration:none;color:var(--ink)">A sense of community</span><span style="text-decoration:none;color:var(--ink)">Open work areas</span><span style="text-decoration:none;color:var(--ink)">Collaborative booths</span><span style="text-decoration:none;color:var(--ink)">Playful design</span></div>
+      <div class="grid2 pair">
+        <figure class="sk"><img src="sk-booth.webp" alt="Sketch: an arched timber booth lined in red with a table for four, beside a tree" loading="lazy"><figcaption>Listening becomes focus.</figcaption></figure>
+        <figure class="sk"><img src="sk-community.webp" alt="Sketch: red stepped timber seating with people sitting on different levels" loading="lazy"><figcaption>Community builds culture.</figcaption></figure>
       </div>
-      <div style="margin-top:26px"><div class="eyebrow">What we chose not to do</div>
+      <div class="sub"><div class="eyebrow">Section · how the trail moves from entry to meeting room</div></div>
+      <figure class="sec"><div class="scroll"><img src="sk-section.webp" alt="Section from the entry passage through reception, the logo wall planter band, the trail, the central green patch and the main passage to meeting room 1" loading="lazy"></div>
+        <figcaption>Entry passage → reception → logo wall and planter band → the trail → central green patch → main passage → meeting room. Slatted timber ceilings mark the arrival and the rooms; ring lights and the tree mark the open trail in between.</figcaption></figure>
+      <div class="sub"><div class="eyebrow">What that becomes on the floor</div>
+        <div class="avoid on"><span>More than one type of workstation</span><span>A biophilic oasis</span><span>A sense of community</span><span>Open work areas</span><span>Collaborative booths</span><span>Playful design</span></div>
+      </div>
+      <div class="sub"><div class="eyebrow">What we chose not to do</div>
         <div class="avoid"><span>red and black surfaces</span><span>headphone motifs</span><span>sound-wave ceilings</span><span>neon slogans</span><span>themed props</span></div>
         <p class="intro" style="margin-top:12px;font-size:14px">The brand shows up once, as the logo at reception. Everything else is about how the space behaves.</p>
       </div>
