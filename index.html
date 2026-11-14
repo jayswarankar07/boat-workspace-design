@@ -293,6 +293,13 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 #p-layout .prog{margin-top:22px}
 @media (max-width:980px){#p-layout .lwhy{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){#p-layout .lwhy{grid-template-columns:1fr}}
+
+#p-layout .area{width:100%;max-width:760px;border-collapse:collapse;margin-top:12px}
+#p-layout .area th,#p-layout .area td{font-family:var(--body);font-size:10pt;font-weight:400;text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)}
+#p-layout .area th{color:var(--muted)}
+#p-layout .area th:nth-child(n+2),#p-layout .area td:nth-child(n+2){text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;width:90px}
+#p-layout .area tfoot td{font-family:var(--display);font-weight:500;border-bottom:0;background:#e3e8e1}
+#p-layout .anote{margin-top:8px;color:var(--muted)}
 </style>
 
 <main class="hero">
@@ -471,6 +478,10 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
         <div><b>16</b><span>seat boardroom</span></div>
         <div><b>1</b><span>reception and waiting arc</span></div>
         <div class="add"><b>+</b><span>garden trail, stepped amphi, listening lab, focus alcoves and phone booths, added because they carry the concept</span></div>
+      </div>
+          <div class="sub"><div class="eyebrow">Area statement</div>
+        <table class="area"><thead><tr><th>Space</th><th>sq ft</th><th>sq m</th></tr></thead><tbody><tr><td>Boardroom (16 seats)</td><td>475</td><td>44.1</td></tr><tr><td>Leadership cabin</td><td>420</td><td>39.1</td></tr><tr><td>Meeting room 1 (4 seats)</td><td>135</td><td>12.7</td></tr><tr><td>Meeting room 2 (4 seats)</td><td>145</td><td>13.6</td></tr><tr><td>Listening lab</td><td>90</td><td>8.2</td></tr><tr><td>Phone booths (3 nos.)</td><td>55</td><td>5.1</td></tr><tr><td>Open floor: reception, stepped amphi, trail, workstations, collab, lounges, pantry and circulation</td><td>5,180</td><td>480</td></tr></tbody><tfoot><tr><td>Total carpet area</td><td>6,500</td><td>603</td></tr></tfoot></table>
+        <p class="anote">Carpet areas, approximate, measured off the rendered plan using the 8.36 m column grid.</p>
       </div>
     </article>
 
