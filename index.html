@@ -239,6 +239,17 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 #p-zoning .rules span{font-family:var(--display);font-size:14pt;font-weight:400;color:#b8875e;line-height:1.2}
 #p-zoning .rules h4{font-family:var(--display);font-size:12pt;font-weight:500;line-height:1.4;margin-bottom:4px}
 #p-zoning .why{margin-top:14px}
+
+#p-zoning .split-note{margin-top:22px;background:var(--card);border-radius:18px;padding:22px;max-width:760px}
+#p-zoning .abar{display:flex;height:14px;border-radius:999px;overflow:hidden;margin:12px 0 14px;gap:2px}
+#p-zoning .alist{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+#p-zoning .alist li{display:grid;grid-template-columns:14px 130px minmax(0,1fr) 44px;gap:10px;align-items:baseline}
+#p-zoning .alist i{width:12px;height:12px;border-radius:3px;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+#p-zoning .alist b{font-family:var(--display);font-weight:500}
+#p-zoning .alist span{color:var(--muted)}
+#p-zoning .alist em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums}
+#p-zoning .alist li>*{font-size:10pt}
+@media (max-width:600px){#p-zoning .alist li{grid-template-columns:14px minmax(0,1fr) 44px}#p-zoning .alist span{grid-column:2/4}}
 /* v12: one type scale for every tab: 14pt heading / 12pt subheading / 10pt text, no bold, one left edge */
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) h3:not(.rh){font-family:var(--display);font-size:14pt;font-weight:500;line-height:1.3;letter-spacing:0;margin:6px 0 10px;max-width:none}
 :is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .eyebrow,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .card h4,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .grad h4,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .map .r b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .dna b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .why p b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .mood figcaption b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .sw b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .tag,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .prog b,:is(#p-research,#p-concept,#p-zoning,#p-layout,#p-mood,#p-palette) .quote{font-family:var(--display);font-size:12pt;font-weight:500;line-height:1.4;letter-spacing:0;text-transform:none}
@@ -411,6 +422,10 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
           <div class="sub"><div class="eyebrow">Programme</div>
         <p class="intro" style="margin-top:8px">15 workstations, a boardroom for 16, the CEO cabin, two meeting rooms for 4, and reception with waiting. Added because they serve the idea: a listening lab, phone booths, a pantry, a cafe nook, the garden table and wall booths.</p>
       </div>
+      <aside class="split-note"><div class="eyebrow">Side note · how the floor area splits</div>
+        <div class="abar"><span style="flex:11;background:#d8bfa3" title="Arrive 11%"></span><span style="flex:17;background:#9fb0ad" title="Meet 17%"></span><span style="flex:15;background:#bccbc4" title="Work 15%"></span><span style="flex:24;background:#a9bf9c" title="Unwind and focus 24%"></span><span style="flex:32;background:#ddd5c8" title="Circulation 32%"></span></div>
+        <ul class="alist"><li><i style="background:#d8bfa3"></i><b>Arrive</b><span>Reception, waiting, washroom lobby</span><em>11%</em></li><li><i style="background:#9fb0ad"></i><b>Meet</b><span>Boardroom, CEO cabin, meeting rooms</span><em>17%</em></li><li><i style="background:#bccbc4"></i><b>Work</b><span>15 desks and booths</span><em>15%</em></li><li><i style="background:#a9bf9c"></i><b>Unwind and focus</b><span>Trail, garden, cafe nook, lab, booths, collab areas</span><em>24%</em></li><li><i style="background:#ddd5c8"></i><b>Circulation</b><span>Paths and links between zones</span><em>32%</em></li></ul>
+      </aside>
     </article>
 
     <article class="pane" id="p-layout">
