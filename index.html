@@ -38,7 +38,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 .tile:hover .dot,.tile:focus-visible .dot{transform:scale(1.25)}
 .tile:hover .arr,.tile:focus-visible .arr{opacity:1;transform:none}
 .tile:focus-visible{outline:2px solid var(--red);outline-offset:3px}
-.foot{grid-column:1/-1;display:flex;justify-content:space-between;gap:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);flex-wrap:wrap}
+.foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);flex-wrap:wrap}
+
+.dl{display:inline-flex;align-items:center;gap:10px;padding:10px 18px 10px 14px;border-radius:999px;background:var(--ink);color:var(--card);text-decoration:none;font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.02em;text-transform:none;box-shadow:0 8px 20px rgba(60,48,36,.18);transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s}
+.dl svg{width:18px;height:18px;transition:transform .3s}
+.dl small{font-size:11px;opacity:.6;font-weight:500}
+.dl:hover{transform:translateY(-2px);background:var(--red)}
+.dl:hover svg{transform:translateY(2px)}
+.dl:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.dl[aria-busy=true]{opacity:.7;pointer-events:none}
 
 /* load sequence */
 @media (prefers-reduced-motion:no-preference){
@@ -174,7 +182,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
     </nav>
   </aside>
 
-  <footer class="foot"><span><span style="text-transform:none">boAt</span> India / Regional HQ</span><span>16th floor · about 603 sq m</span></footer>
+  <footer class="foot"><span><span style="text-transform:none">boAt</span> India / Regional HQ</span><a class="dl" id="dl" href="boAt-HQ-CAD-drawing.dwg" download="boAt-HQ-CAD-drawing.dwg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Download CAD file</span><small>.dwg</small></a></footer>
 </main>
 
 <div class="ov" id="ov"></div>
@@ -351,5 +359,19 @@ if(!reduce){
       logo.style.transform=`translate(${(-cx*18).toFixed(1)}px, ${(-cy*10).toFixed(1)}px)`;}
     requestAnimationFrame(loop);})();
 }
+})();
+
+// CAD download: inside Claude the page asks the viewer to save a zip of the drawing; on a normal web host the link downloads the .dwg directly
+(async()=>{
+  const a=document.getElementById('dl'); if(!a||!window.claude||!window.claude.use) return;
+  const dlns=await window.claude.use('downloads'); if(!dlns) return;
+  a.addEventListener('click',async e=>{
+    e.preventDefault(); a.setAttribute('aria-busy','true'); const lbl=a.querySelector('span'),old=lbl.textContent;
+    try{ const r=await fetch('cad-zip.b64.txt'); if(!r.ok) throw new Error('fetch');
+      const bin=atob((await r.text()).trim()),u=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i);
+      await dlns.save({filename:'boAt-HQ-CAD-drawing.zip',data:u}); lbl.textContent='Saved'; }
+    catch(err){ lbl.textContent=(err&&err.code==='declined')?old:'Download unavailable here'; }
+    finally{ a.removeAttribute('aria-busy'); setTimeout(()=>{lbl.textContent=old},2500); }
+  });
 })();
 </script>
