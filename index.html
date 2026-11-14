@@ -283,6 +283,16 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
 #p-zoning .rules li{align-items:baseline;align-self:stretch}
 #p-zoning .rules h4,#p-zoning .rules p{margin:0;padding:0}
 #p-zoning .rules span{line-height:1.4}
+
+#p-layout .zhint{margin-top:10px;color:var(--muted);text-align:right}
+#p-layout .sub{margin-top:clamp(30px,3.4vw,46px)}
+#p-layout .lwhy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+#p-layout .lwhy>div{background:#e3e8e1;border-radius:16px;padding:22px}
+#p-layout .lwhy h4{font-family:var(--display);font-size:12pt;font-weight:500;line-height:1.4;margin:0 0 6px}
+#p-layout .lwhy p{margin:0}
+#p-layout .prog{margin-top:22px}
+@media (max-width:980px){#p-layout .lwhy{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){#p-layout .lwhy{grid-template-columns:1fr}}
 </style>
 
 <main class="hero">
@@ -442,19 +452,26 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15p
     <article class="pane" id="p-layout">
       <div class="eyebrow">04 · Layout</div>
       <h3>The rendered floor plan</h3>
-      <p class="intro">About 6,500 sq ft inside the existing columns, shafts, glazing and doors, all kept as built. Click the plan to zoom in on any part of it.</p>
+      <p class="intro" style="max-width:none">One continuous trail organises the whole floor. It starts at the main entrance, wraps around the reception and branding wall, and carries people past every kind of work setting before it reaches the quiet rooms on the glazed edge. Nothing is a corridor; every route is also a place to pause, meet or work.</p>
+      <div class="viewer" id="viewer"><img id="vimg" src="plan-v2.jpg" alt="Rendered floor plan of boAt India HQ with reception, stepped amphi, garden trail, formal working zone, boardroom, leadership cabin, meeting rooms, phone booths, focus alcoves, listening lab and pantry"></div>
+      <p class="zhint">Click the plan to zoom in on any part of it.</p>
+      <div class="sub"><div class="eyebrow">Why this plan works for boAt India</div></div>
+      <div class="lwhy">
+        <div><h4>The trail is the hero</h4><p>A pebble and planting belt winds from reception to the far corners. It replaces corridors with a garden walk, so the most memorable part of the office is the one everyone uses every day.</p></div>
+        <div><h4>Circulation that builds curiosity</h4><p>Passages open and close, from 5 ft at the entrance to almost 11 ft at the formal working zone. The path always bends, so the next space reveals itself as you walk instead of all at once.</p></div>
+        <div><h4>A new view at every turn</h4><p>Turn left from reception and the tree, collab zone and listening lab open up. Turn right and you meet the open sit-outs and focus alcoves. Look ahead and the working zone appears through planting.</p></div>
+        <div><h4>Public to private, without walls</h4><p>Reception, waiting and the semi-public collab zone stay near the door. Teams work in the centre. The boardroom, leadership cabin, meeting rooms and phone booths take the quiet glazed edge, with executive lounges as a soft filter between.</p></div>
+        <div><h4>The stepped amphi</h4><p>Timber steps rise behind the branding wall. They give the floor its one level change, seat the whole team for a town hall or a launch, and screen the work zone from visitors waiting below.</p></div>
+        <div><h4>Built for how boAt works</h4><p>A young, fast-moving D2C team gets formal desks, informal tables, booths and alcoves, plus a listening lab to test products in house. Columns, shafts, washrooms and glazing stay as built, and every finish is a standard fit-out material.</p></div>
+      </div>
       <div class="prog">
-        <div><b>15</b><span>workstations on one curved bench</span></div>
+        <div><b>15</b><span>workstations</span></div>
         <div><b>1</b><span>leadership cabin</span></div>
         <div><b>2</b><span>meeting rooms, 4 people each</span></div>
         <div><b>16</b><span>seat boardroom</span></div>
         <div><b>1</b><span>reception and waiting arc</span></div>
-        <div class="add"><b>+</b><span>garden trail, lounge and phone booths, added because they carry the concept</span></div>
+        <div class="add"><b>+</b><span>garden trail, stepped amphi, listening lab, focus alcoves and phone booths, added because they carry the concept</span></div>
       </div>
-      <div class="views" role="group" aria-label="Plan view">
-        <button aria-pressed="true" data-v="plan.jpg">Rendered plan</button><button aria-pressed="false" data-v="model.webp">3D model</button>
-      </div>
-      <div class="viewer" id="viewer"><img id="vimg" src="plan.jpg" alt="Rendered floor plan of boAt India HQ"><span class="hint">Click to zoom</span></div>
     </article>
 
     <article class="pane" id="p-mood">
